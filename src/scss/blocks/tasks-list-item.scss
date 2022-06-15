@@ -1,0 +1,30 @@
+.tasks-list__item {
+  display: flex;
+  padding: 20px 5px;
+  border: solid 1px #F7F7F7;
+
+  &:hover {
+    background-color: #F7F7F7;
+  }
+}
+
+.tasks-list__item-text {
+  border: none;
+  outline: none;
+}
+
+.tasks-list__item-input {
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  width: 100%;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+
+  &::placeholder {
+    color: #D0D0D0;
+  }
+}
