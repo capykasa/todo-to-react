@@ -1,3 +1,6 @@
+import AddTask from "./add-task";
+import Tabs from "./tabs";
+
 function Main(): JSX.Element {
   return (
     <div className="page">
@@ -11,12 +14,7 @@ function Main(): JSX.Element {
         <h1 className="visually-hidden">Тестовое задание</h1>
 
         <div className="tasks-list">
-          <div className="tasks-list__add-task">
-            <button className="toggle-all" aria-label="Toggle all to do tasks">
-              <span className="rotate"></span>
-            </button>
-            <input className="tasks-list__item-input" type="text" placeholder="What needs to be done?" />
-          </div>
+          <AddTask />
 
           <ul className="tasks-list__tasks">
             <li className="tasks-list__item">
@@ -39,21 +37,7 @@ function Main(): JSX.Element {
             </li>
           </ul>
 
-          <div className="tabs">
-            <span className="tabs__info" aria-label="Number of to do tasks left to complete">3 items left</span>
-            <ul className="tabs__menu">
-              <li className="tabs__menu-item" aria-label="Show all to do tasks">
-                <a href="/" className="tabs__menu-item-link">All</a>
-              </li>
-              <li className="tabs__menu-item tabs__menu-item--active" aria-label="Show active to do tasks">
-                <a href="/" className="tabs__menu-item-link">Active</a>
-              </li>
-              <li className="tabs__menu-item" aria-label="Show completed to do tasks">
-                <a href="/" className="tabs__menu-item-link">Completed</a>
-              </li>
-            </ul>
-            <button className="tabs__clear-button" aria-label="Clear completed to do tasks">Clear completed</button>
-          </div>
+          <Tabs />
         </div>
       </main>
     </div >
