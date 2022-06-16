@@ -1,13 +1,12 @@
 import React from "react";
-import { Action, ActionType, ContextState } from "../types/actions";
-import { State } from "../types/state";
+import { Action, ActionType } from "../types/actions";
+import { ContextState, State } from "../types/state";
 
 export const initialState: State = {
   newTask: '',
   tasks: []
 }
-
-export const ContextApp = React.createContext<Partial<ContextState>>({});
+export const ContextApp = React.createContext<ContextState>({} as ContextState);
 
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {

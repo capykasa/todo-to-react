@@ -1,5 +1,3 @@
-import { Dispatch } from "react";
-import { State } from "./state";
 import { Task } from "./task";
 
 export enum ActionType {
@@ -33,8 +31,3 @@ export type Action =
   | ChangeTask
   | RemoveTask
   | ToggkeTask;
-
-export type ContextState = {
-  state: State;
-  changeState: Dispatch<Action>
-}
