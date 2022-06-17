@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { Filter } from "../const";
-import { ContextApp } from "../store/reducer";
-import { ActionType } from "../types/actions";
-import { Task } from "../types/task";
+import { Filter } from "../../const";
+import { ContextApp } from "../../store/reducer";
+import { ActionType } from "../../types/actions";
+import { Task } from "../../types/task";
 
 const Tabs: React.FC = () => {
   const { state, changeState } = useContext(ContextApp);

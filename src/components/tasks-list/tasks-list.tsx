@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ContextApp } from "../store/reducer";
-import { ActionType } from "../types/actions";
-import { Task } from "../types/task";
-import { filterTasks, sortTasks } from "../utils";
+import { ContextApp } from "../../store/reducer";
+import { ActionType } from "../../types/actions";
+import { Task } from "../../types/task";
+import { filterTasks, sortTasks } from "../../utils";
 
 const TasksList: React.FC = () => {
   const { state, changeState } = useContext(ContextApp);

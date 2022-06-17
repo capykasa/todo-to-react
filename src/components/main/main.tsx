@@ -1,6 +1,6 @@
-import NewTask from "./new-task";
-import Tabs from "./tabs";
-import TasksList from "./tasks.list";
+import NewTask from "../new-task/new-task";
+import Tabs from "../tabs/tabs";
+import TasksList from "../tasks-list/tasks-list";
 
 const Main: React.FC = () => {
   return (

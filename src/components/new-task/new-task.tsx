@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { ContextApp } from '../store/reducer';
-import { ActionType } from '../types/actions';
+import { ContextApp } from '../../store/reducer';
+import { ActionType } from '../../types/actions';
 
 const MIN_SYMBOLS = 1;
 
