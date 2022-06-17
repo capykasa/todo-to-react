@@ -10,7 +10,6 @@ const Main: React.FC = () => {
   const { state, changeState } = useContext(ContextApp);
 
   const sortedTasks = sortTasks(state.tasks);
-  console.log(sortedTasks)
 
   const removeTask = (taskForRemoving: Task) => {
     changeState({ type: ActionType.REMOVE, payload: taskForRemoving })
@@ -31,25 +30,25 @@ const Main: React.FC = () => {
       <main className="page-main">
         <h1 className="visually-hidden">Тестовое задание</h1>
 
-        <div className="tasks-list">
+        <div className="tasks__list">
           <NewTask />
 
           {state.tasks.length > 0
-            ? <ul className="tasks-list__tasks">
-              {state.tasks.map((task, i) => (
+            ? <ul className="tasks__list-tasks">
+              {sortedTasks.map((task, i) => (
                 <li
                   key={i}
-                  className="tasks-list__item"
+                  className="tasks__list-item"
                 >
                   <input
                     type="checkbox"
-                    className="tasks-list__item-checkbox"
+                    className="tasks__list-item-checkbox"
                     id={`task-${i}`}
                     onChange={() => toggleReadiness(task)}
                     checked={task.isDone}
                   />
-                  <label className="tasks-list__item-mark" htmlFor={`task-${i}`}></label>
-                  <span className="tasks-list__item-text">{task.name}</span>
+                  <label className="tasks__list-item-mark" htmlFor={`task-${i}`}></label>
+                  <span className="tasks__list-item-text">{task.name}</span>
                   <button
                     className="delete-button"
                     onClick={() => removeTask(task)}
@@ -59,7 +58,7 @@ const Main: React.FC = () => {
                 </li>
               ))}
             </ul>
-            : <p>add the first task</p>}
+            : <span className="tasks__list-empty">add the first task</span>}
 
           <Tabs />
         </div>

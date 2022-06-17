@@ -24,6 +24,9 @@ export const reducer = (state: State, action: Action): State => {
     case ActionType.REMOVE: {
       return { ...state, tasks: [...state.tasks.filter(task => task !== action.payload)] }
     }
+    case ActionType.REMOVE_COMPLATED: {
+      return { ...state, tasks: [...state.tasks.filter(task => !task.isDone)] }
+    }
     case ActionType.TOGGLE: {
       return { ...state, tasks: [...state.tasks.map((task) => (task !== action.payload ? task : { ...task, isDone: !task.isDone }))] }
     }

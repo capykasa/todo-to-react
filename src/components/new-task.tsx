@@ -28,18 +28,18 @@ const NewTask: React.FC = () => {
   }
 
   return (
-    <div className="tasks-list__add-task">
+    <div className="tasks__list-add-task">
       <button className="toggle-all" aria-label="Toggle all to do tasks">
         <span className="rotate"></span>
       </button>
       <form
-        className='tasks-list__item-form'
+        className='tasks__list-item-form'
         onSubmit={(event) => addTask(event, state.newTask)}
       >
         <input
           type="text"
           placeholder="What needs to be done?"
-          className="tasks-list__item-input"
+          className="tasks__list-item-input"
           onChange={(event) => changeTask(event)}
           value={state.newTask}
         />
