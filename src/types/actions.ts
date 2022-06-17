@@ -6,6 +6,7 @@ export enum ActionType {
   REMOVE = 'REMOVE',
   REMOVE_COMPLATED = 'REMOVE_COMPLATED',
   TOGGLE = 'TOGGLE',
+  SELECT_FILTER = 'SELECT_FILTER',
 }
 
 type AddTask = {
@@ -32,9 +33,16 @@ type ToggkeTask = {
   type: ActionType.TOGGLE;
   payload: Task;
 }
+
+type SelectFilter = {
+  type: ActionType.SELECT_FILTER;
+  payload: string;
+}
+
 export type Action =
   | AddTask
   | ChangeTask
   | RemoveTask
   | RemoveComplated
-  | ToggkeTask;
+  | ToggkeTask
+  | SelectFilter;

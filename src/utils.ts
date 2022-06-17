@@ -17,3 +17,15 @@ export const sortTasks = (tasks: Task[]): Task[] => {
 
   return sortedTasks;
 };
+
+export const filterTasks = (tasks: Task[], filter: string): Task[] => {
+  let filteredTasks = tasks;
+
+  if (filter === 'Active') {
+    return filteredTasks.filter((task) => !task.isDone)
+  }
+  if (filter === 'Complated') {
+    return filteredTasks.filter((task) => task.isDone)
+  }
+  return filteredTasks;
+};
